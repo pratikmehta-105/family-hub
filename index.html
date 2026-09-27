@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f766e"><link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg">
+<title>FamilyHub</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div><div class="eyebrow">FAMILY ORGANIZER</div><h1>🏠 FamilyHub</h1></div><button class="icon-btn" id="settingsBtn">⚙️</button></header>
+<main class="container">
+<section class="welcome card"><div><div class="small">Everything important, in one place</div><h2>Family Emergency Center</h2></div><span class="status-dot">● Local</span></section>
+<section><div class="section-title"><h3>🚨 Emergency</h3><button class="text-btn" id="editEmergency">Edit</button></div><div class="emergency-grid" id="emergencyGrid"></div></section>
+<section><div class="section-title"><h3>👨‍👩‍👧 Family</h3><button class="text-btn" id="addMemberBtn">+ Add</button></div><div class="member-list" id="memberList"></div></section>
+<section><div class="section-title"><h3>Quick Access</h3></div><div class="tile-grid">
+<button class="tile" data-section="medical">🏥<span>Medical</span></button><button class="tile" data-section="contacts">📞<span>Contacts</span></button>
+<button class="tile" data-section="medicines">💊<span>Medicines</span></button><button class="tile" data-section="documents">📄<span>Documents</span></button>
+<button class="tile" data-section="reminders">📅<span>Reminders</span></button><button class="tile" data-section="notes">📝<span>Notes</span></button>
+</div></section>
+<section class="card backup-card"><h3>💾 Backup & Restore</h3><p>Export your FamilyHub data or restore a previous backup.</p>
+<div class="button-row"><button class="secondary" id="exportBtn">Export</button><label class="secondary file-btn">Import<input type="file" id="importInput" accept=".json,application/json"></label></div></section>
+<section class="card privacy-card"><strong>🔐 Privacy note</strong><p>V1 stores information in this browser only. Do not enter highly sensitive information until secure login/cloud storage is added.</p></section>
+</main>
+<nav class="bottom-nav"><button class="nav-item active" data-nav="home">⌂<span>Home</span></button><button class="nav-item" data-nav="contacts">☎<span>Contacts</span></button><button class="nav-item" data-nav="notes">✎<span>Notes</span></button><button class="nav-item" data-nav="settings">⚙<span>Settings</span></button></nav>
+<div class="modal" id="modal" aria-hidden="true"><div class="modal-sheet"><div class="modal-head"><h2 id="modalTitle"></h2><button class="close" id="closeModal">×</button></div><div id="modalBody"></div></div></div>
+<script src="app.js"></script>
+</body></html>
